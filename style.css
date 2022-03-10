@@ -1,5 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne&display=swap");
+
 body {
   margin: 0px;
+  font-family: "Syne", sans-serif;
 }
 
 .container {
@@ -20,7 +23,7 @@ body {
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 50px 1fr;
   align-items: center;
-  padding-left: 6px;
+  padding: 6px;
 }
 
 .sidebar {
@@ -28,6 +31,7 @@ body {
   padding-left: 15px;
   color: white;
   grid-row: 1 / -1;
+  padding-top: 15px;
 
   display: grid;
   grid-template-columns: 1fr;
@@ -45,27 +49,64 @@ body {
   font-size: 24px;
   margin: 0px;
   padding-left: 15px;
+  transition: 100ms;
 
   display: grid;
   grid-template-columns: 1fr;
   gap: 8px;
 }
 
+.user-options > ul > li:hover,
+.main-options > ul > li:hover {
+  transform: translate(2px, -2px);
+}
+
 .main-content {
-  background-color: red;
+  background-color: rgb(218, 214, 214);
   grid-row: 2 / -1;
   grid-column: 2 / -1;
 }
 
-.search {
-  grid-column: 1 / 2;
-}
-
 .search > input {
-  width: min(600px, 90%);
-  height: 22px;
-  background-color: rgb(196, 195, 195);
-  border-radius: 10px;
+  width: 95%;
+  height: 26px;
+  background-color: rgb(218, 214, 214);
+  border-radius: 15px;
   outline: none;
   border: none;
+}
+
+.login-info {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.about-user {
+  font-weight: 700;
+  margin-left: 24px;
+}
+
+.greeting {
+  font-size: 14px;
+}
+
+.user-info {
+  font-size: 24px;
+}
+
+.header-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 8px;
+}
+
+.header-options > button {
+  background-color: #0ea5e9;
+  color: white;
+  font-weight: 700;
+  border-radius: 10px;
+  border: none;
+  font-family: inherit;
+  font-size: 20px;
+  padding: 4px 6px;
 }
