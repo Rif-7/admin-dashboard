@@ -18,6 +18,8 @@ body {
 .header {
   background-color: white;
   grid-column: 2 / -1;
+  box-shadow: 0px 5px 5px #888;
+  z-index: 1;
 
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -42,6 +44,15 @@ body {
 .sidebar > .logo {
   font-size: 38px;
   font-weight: 700;
+
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.dashboard-icon {
+  height: 40px;
+  width: 40px;
 }
 
 .user-options > ul,
@@ -62,6 +73,13 @@ body {
   transform: translate(2px, -2px);
 }
 
+.user-options > ul > li,
+.main-options > ul > li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .main-content {
   background-color: rgb(218, 214, 214);
   grid-row: 2 / -1;
@@ -74,8 +92,14 @@ body {
   gap: 15px;
 }
 
+.search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .search > input {
-  width: 95%;
+  width: 90%;
   height: 26px;
   background-color: rgb(218, 214, 214);
   border-radius: 15px;
@@ -86,6 +110,10 @@ body {
 .login-info {
   font-size: 20px;
   font-weight: 700;
+
+  display: flex;
+  gap: 8px;
+  align-items: center;
 }
 
 .about-user {
@@ -117,6 +145,11 @@ body {
   font-size: 20px;
   padding: 4px 6px;
   width: 100%;
+}
+
+.icon {
+  height: 25px;
+  width: 25px;
 }
 
 .title {
@@ -178,7 +211,17 @@ body {
   align-self: flex-end;
 
   display: flex;
-  gap: 4px;
+  gap: 12px;
+  align-items: center;
+}
+
+.project-btn {
+  width: 25px;
+  transition: 100ms;
+}
+
+.project-btn:hover {
+  transform: scale(110%);
 }
 
 .announcement-container,
@@ -227,4 +270,9 @@ body {
 
 .trending-item .description {
   font-size: 16px;
+}
+
+.sidebar-icon {
+  width: 25px;
+  height: 25px;
 }
