@@ -35,7 +35,8 @@ body {
 
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 100px auto auto;
+  grid-template-rows: 100px 250px 250px;
+  gap: 15px;
 }
 
 .sidebar > .logo {
@@ -65,6 +66,12 @@ body {
   background-color: rgb(218, 214, 214);
   grid-row: 2 / -1;
   grid-column: 2 / -1;
+  padding: 15px;
+
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  grid-template-rows: minmax(300px, auto) 1fr;
+  gap: 15px;
 }
 
 .search > input {
@@ -109,4 +116,115 @@ body {
   font-family: inherit;
   font-size: 20px;
   padding: 4px 6px;
+  width: 100%;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.trending {
+  grid-row: 2;
+  grid-column: 2;
+}
+
+.projects {
+  grid-row: 1 / -1;
+  grid-column: 1;
+}
+
+.project-items {
+  margin-top: 15px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  gap: 8px;
+}
+
+.project-card {
+  padding: 15px;
+  background-color: white;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+}
+
+.project-card::before {
+  content: "";
+  width: 10px;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: yellow;
+  border-radius: 8px;
+}
+
+.project-header {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.description {
+  font-size: 18px;
+  color: rgb(172, 172, 172);
+}
+
+.project-buttons {
+  height: 50px;
+  align-self: flex-end;
+
+  display: flex;
+  gap: 4px;
+}
+
+.announcement-container,
+.trending-container {
+  margin-top: 15px;
+  border-radius: 8px;
+  background-color: white;
+  width: 100%;
+  padding: 30px 15px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.announcement {
+  border-bottom: 1px solid #888;
+}
+
+.ann-header {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.ann-content {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.announcement:last-child {
+  border-bottom: none;
+}
+
+.trending-item {
+  display: flex;
+  gap: 4px;
+  margin-left: 30px;
+}
+
+.name {
+  font-size: 16px;
+  color: black;
+  font-weight: 600;
+}
+
+.trending-item .description {
+  font-size: 16px;
 }
